@@ -1,0 +1,27 @@
+let arr = [
+    {name: "A", age: 14, gender: "M"}, 
+    {name: "B", age: 34, gender: "M"}, 
+    {name: "C", age: 24, gender: "F"}, 
+    {name: "D", age: 44, gender: "F"}, 
+    {name: "E", age: 44, gender: "M"}, 
+    {name: "I", age: 28, gender: "F"}, 
+    {name: "G", age: 36, gender: "M"}, 
+    {name: "H", age: 47, gender: "F"}
+];
+
+// some takes each value 1 by 1 nd returns a true if every cb returns true
+// return false only if all cb return false
+
+// Is there a valid candidate (F and between 20 and 30)
+
+let isThereAnyValidCandidate = arr.some(function(v ,i , oarr){
+    if(v.gender == 'F' && v.age >= 20 && v.age <= 30)
+    {
+        return true;
+
+    }
+    else{
+        return false;
+    }
+})
+console.log(isThereAnyValidCandidate);
